@@ -1,0 +1,6 @@
+<div class="col-md-5">
+    <app-recepie-list ></app-recepie-list>
+</div>
+<div class="col-md-7">
+    <app-recepie-detail *ngIf="selectedRecepie" [recepie]="selectedRecepie"></app-recepie-detail>
+</div>

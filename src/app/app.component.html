@@ -1,0 +1,5 @@
+<app-header (eventEmitter)="trigger($event)"></app-header>
+<div class="container">
+    <app-recepie *ngIf="showRecepie"></app-recepie>
+    <app-shopping-list *ngIf="!showRecepie"></app-shopping-list>
+</div>
