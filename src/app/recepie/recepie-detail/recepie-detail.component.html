@@ -17,10 +17,19 @@
         Manage Recepie <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">TO Shopping List</a></li>
+        <li><a style= "cursor: pointer" >TO Shopping List</a></li>
         <li><a href="#">Edit Recepie</a></li>
         <li><a href="#">Delete Recepie</a></li>
       </ul>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li class="list-item-group" *ngFor= "let ingredients of recepie.ingredients">
+              {{ingredients.name}} -{{ingredients.amount}}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

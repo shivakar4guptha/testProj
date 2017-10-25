@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recepie } from '../recepie.model';
+import { RecepieService } from '../recepie.service';
 
 @Component({
   selector: 'app-recepie-detail',
@@ -8,9 +9,12 @@ import { Recepie } from '../recepie.model';
 })
 export class RecepieDetailComponent implements OnInit {
   @Input() recepie: Recepie;
-  constructor() { }
-
+  constructor(private recepieService: RecepieService) { }
+  addingIng(){
+    console.log('hello ' + this.recepie.ingredients);
+    this.recepieService.updateIngredient(this.recepie.ingredients);
+  }
   ngOnInit() {
   }
-
+  
 }
